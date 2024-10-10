@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  line-height: 32px;
+  color: #fff;
+  padding: 8px 16px;
+
+  .operate-icon {
+    svg {
+      cursor: pointer;
+    }
+  }
+}
