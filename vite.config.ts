@@ -7,6 +7,7 @@ const resolve = (val: string) => path.resolve(__dirname, val)
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/lowcoder/",
   plugins: [
     react(),
     svgrPlugin({
