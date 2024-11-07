@@ -1,0 +1,31 @@
+.material-container {
+  width: 310px;
+  background-color: #fff;
+  flex-shrink: 0;
+
+  .ant-tabs {
+    padding: 0 8px;
+  }
+
+  .ant-collapse-content-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    .material-item {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      border: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

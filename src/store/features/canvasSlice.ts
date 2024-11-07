@@ -1,8 +1,15 @@
 // features/canvasSlice.ts
+import { UICompType } from "@/materials/material"
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import { v4 as uuidv4 } from "uuid"
+
+interface Item {
+  id: string | number
+  name: UICompType
+}
 
 interface CanvasState {
-  items: any[]
+  items: Item[]
 }
 
 const initialState: CanvasState = {
@@ -14,10 +21,13 @@ const canvasSlice = createSlice({
   initialState,
   reducers: {
     addItem(state, action: PayloadAction<any>) {
-      state.items.push(action.payload)
+      state.items.push({
+        id: uuidv4(),
+        name: action.payload,
+      })
     },
     removeItem(state, action: PayloadAction<any>) {
-      state.items = state.items.filter((item) => item !== action.payload)
+      state.items = state.items.filter((item) => item.id !== action.payload)
     },
   },
 })
